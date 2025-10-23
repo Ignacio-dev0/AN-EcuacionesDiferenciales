@@ -14,20 +14,21 @@
             <div class="logo-icon">∫</div>
             Ecuaciones Diferenciales
         </div>
-        <ul>
-            <li><a href="#home">Introducción</a></li>
-            <li><a href="#fundamentos">Fundamentos</a></li>
-            <li><a href="#problema">Problema</a></li>
-            <li><a href="#calculadora">Calculadora</a></li>
-        </ul>
+        <div class="nav-center">
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#fundamentos">Fundamentos</a></li>
+                <li><a href="#utilidades">Utilidades</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+            </ul>
+        </div>
         <a href="#introduccion" class="btn-start">Empezar</a>
     </nav>
 
     <!-- HOME -->
     <section id="home">
-        <h2 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tighter text-primary-dark dark:text-primary-light">
-            Explora el Mundo de las <br>Ecuaciones Diferenciales
-        </h2>
+        <h2 class="home-title">Explora el Mundo de las Ecuaciones Diferenciales</h2>
         <div class="tarjetas">
       
       <div class="tarjeta">
@@ -52,9 +53,9 @@
         <div class="icono">
           <span class="material-symbols-outlined">🚀</span>
         </div>
-        <h3>El Problema</h3>
+        <h3>Utilidades Prácticas</h3>
         <p>Aplica tus conocimientos para resolver un desafío práctico y ver las ecuaciones en acción.</p>
-        <a href="#problema">Resolver</a>
+        <a href="#utilidades">Resolver</a>
       </div>
 
       <div class="tarjeta">
@@ -118,9 +119,9 @@
         </div>
     </section>
 
-    <!-- PROBLEMA -->
-    <section id="problema">
-        <h2>El Problema: Descifrando el Cambio</h2>
+    <!-- UTILIDADES PRÁCTICAS -->
+    <section id="utilidades">
+        <h2>Utilidades Prácticas</h2>
         <p class="subtitle">Las ecuaciones diferenciales son el lenguaje matemático para describir cómo cambian las cosas. Desde el movimiento de los planetas hasta el crecimiento de una población, nos ayudan a modelar, predecir y comprender el universo dinámico que nos rodea.</p>
         
         <div class="problem-cards">
@@ -143,7 +144,7 @@
 
         <h3 style="margin-top: 4rem;">Un Vistazo a la Belleza Matemática</h3>
         <div class="equation-box">
-            <h4 style="color: #4c6ef5; text-align: center;">Ecuación del Oscilador Armónico</h4>
+            <h4 class="equation-title">Ecuación del Oscilador Armónico</h4>
             <div class="equation">y'' + ω²y = 0</div>
             <p style="text-align: center; color: #666; margin-top: 1rem;">
                 Esta elegante ecuación describe todo, desde el movimiento de un péndulo hasta las vibraciones en un cristal. Representa un sistema que, cuando se desplaza de su posición de equilibrio, experimenta una fuerza restauradora proporcional al desplazamiento. Su solución es la icónica onda sinusoidal, el ritmo fundamental de la naturaleza.
@@ -160,17 +161,25 @@
     <p class="subtitle">Simula el crecimiento logístico de una población en el tiempo.</p>
 
     <div class="inputs">
-      <label for="p0">Población inicial (P₀):</label>
-      <input type="number" id="p0" value="100">
-
-      <label for="k">Capacidad máxima (K):</label>
-      <input type="number" id="k" value="1000">
-
-      <label for="r">Tasa de crecimiento (r):</label>
-      <input type="number" id="r" value="0.2" step="0.01">
-
-      <label for="tiempo">Tiempo (t):</label>
-      <input type="number" id="tiempo" value="10">
+      <div class="input-group">
+        <label for="p0">Población inicial (P₀):</label>
+        <input type="number" id="p0" value="100">
+      </div>
+      
+      <div class="input-group">
+        <label for="k">Capacidad máxima (K):</label>
+        <input type="number" id="k" value="1000">
+      </div>
+      
+      <div class="input-group">
+        <label for="r">Tasa de crecimiento (r):</label>
+        <input type="number" id="r" value="0.2" step="0.01">
+      </div>
+      
+      <div class="input-group">
+        <label for="tiempo">Tiempo (t):</label>
+        <input type="number" id="tiempo" value="10">
+      </div>
 
       <button id="calcular">Calcular</button>
     </div>
@@ -181,6 +190,8 @@
 
      <h3>📈 Modelo Logístico</h3>
   <canvas id="grafico" width="800" height="400"></canvas>
+
+  <div class="chart-spacing"></div>
 
   <h3>📉 Modelo Exponencial</h3>
   <canvas id="graficoExp" width="800" height="400"></canvas>
